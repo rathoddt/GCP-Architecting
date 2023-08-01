@@ -9,3 +9,8 @@ gcloud services enable run.googleapis.com  cloudbuild.googleapis.com secretmanag
 # Cloning sample repo
 git clone https://github.com/ACloudGuru-Resources/content-google-cloud-run-deep-dive/
 ```
+
+## Creating GKE cluster
+```
+gcloud container clusters create acg --zone us-east1-b
+```
