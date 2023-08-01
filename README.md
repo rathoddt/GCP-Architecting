@@ -14,3 +14,10 @@ git clone https://github.com/ACloudGuru-Resources/content-google-cloud-run-deep-
 ```
 gcloud container clusters create acg --zone us-east1-b
 ```
+
+Using `kubectl`, confirm the cluster was created successfully:
+kubectl get nodes
+Using git, clone the repository with the lab files:
+```
+git clone https://github.com/ACloudGuru-Resources/content-gcpro-operations.git
+```
