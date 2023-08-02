@@ -1,4 +1,17 @@
 # Billing
+
+```
+SELECT *  
+FROM `cloud-training-prod-bucket.arch_infra.billing_data`
+```
+ordering by cost or usage amount by adding the below string to your query to sort by the column of your choice:
+```
+SELECT *  
+FROM `cloud-training-prod-bucket.arch_infra.billing_data`
+ORDER BY cost DESC
+```
+
+
 Find all charges that were more than 3 dollars:
 ```
 SELECT product, resource_type, start_time, end_time,  
@@ -24,3 +37,4 @@ WHERE (cost > 1)
 GROUP BY cost, product
 LIMIT 200
 ```
+
