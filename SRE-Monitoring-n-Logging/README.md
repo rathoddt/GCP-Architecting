@@ -25,3 +25,5 @@ gcloud beta compute instances create website-agent --zone=us-central1-a --machin
 ```
 Link
 https://acloudguru-content-attachment-production.s3-accelerate.amazonaws.com/1600872385381-website-instance-create-with-agent.txt
+
+https://github.com/GoogleCloudPlatform/monitoring-dashboard-samples
