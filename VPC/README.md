@@ -52,3 +52,8 @@ IAM role -Shared VPC Admin
 
 https://cloud.google.com/vpc/docs/shared-vpc  
 https://cloud.google.com/vpc/docs/provisioning-shared-vpc
+
+## Cloud NAT
+ Cloud NAT lets your VM instances and container pods communicate with the internet using a shared, public IP address.
+
+Cloud NAT uses Cloud NAT gateway to manage those connections. Cloud NAT gateway is region and VPC network specific.
