@@ -1,6 +1,13 @@
 # VPC
 VPC in GCP provides global network connectivity (inclusing regions). <i>Firewalls </i> on the other hand provides security to this network (VPC) and managed by network admin role
 
+## Firewalls
+
+```
+gcloud compute --project=playground-s-11-ce98d3f4 firewall-rules create allow-ssh --direction=INGRESS --priority=1000 --network=acg-vpc-demo-01 --action=ALLOW --rules=tcp:22 --source-ranges=0.0.0.0/0
+
+gcloud compute --project=playground-s-11-ce98d3f4 firewall-rules create allow-icmp --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=icmp --target-tags=allow-icmp
+```
 ## VPC Peering
 SaaS - VPC peering  
 IAM roles required to establish : Project Owner, Project Editor, and Network Admin
@@ -57,3 +64,5 @@ https://cloud.google.com/vpc/docs/provisioning-shared-vpc
  Cloud NAT lets your VM instances and container pods communicate with the internet using a shared, public IP address.
 
 Cloud NAT uses Cloud NAT gateway to manage those connections. Cloud NAT gateway is region and VPC network specific.
+
+
