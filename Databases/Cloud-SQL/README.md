@@ -13,8 +13,28 @@ curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/clou
 ls
 chmod +x cloud-sql-proxy 
 ```
-
+7) Enable `Cloud SQL Admin API `
 7) Get connection name from newly created database ans issue following command in Client VM
 ```
- ./cloud-sql-proxy -instance=serverless-gcp-391314:us-central1:forumdb=tcp:3306
+ 
+ ./cloud-sql-proxy \
+--credentials-file PATH_TO_KEY_FILE INSTANCE_CONNECTION_NAME &
+
+./cloud-sql-proxy \
+--credentials-file fourm-sa.json serverless-gcp-391314:us-central1:forumdb &
+
+mysql -u root -p --host 127.0.0.1
+CREATE DATABASE forum;
+#exit after creating database
+
+#Now import database
+mysql -u root -p --host 127.0.0.1 forum < forumdb.sql 
+
+# Login back
+mysql -u root -p --host 127.0.0.1
+use forum;
+show tables;
+
+#You should see data imported
+select count(*) from authors;
 ```
