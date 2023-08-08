@@ -39,46 +39,51 @@ When prompted, click Authorize.
 
 Install the Nginx Ingress Controller
 
-    From the Cloud Shell, using kubectl, install the NGINX Ingress Controller components by using the public provider manifest:
-    ```
-    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.1/deploy/static/provider/cloud/deploy.yaml
-    ```
-    Confirm the controller is installed and running by viewing its deployment:
-    ```
-    kubectl get deployments -n ingress-nginx
-    ```
+From the Cloud Shell, using kubectl, install the NGINX Ingress Controller components by using the public provider manifest:
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.1/deploy/static/provider/cloud/deploy.yaml
+```
+Confirm the controller is installed and running by viewing its deployment:
+```
+kubectl get deployments -n ingress-nginx
+```
 
-    Find the external IP of Nginx:
-    ```
-    kubectl get services -n ingress-nginx
-    ```
-    Navigate to the IP address using a new browser tab. If you get an NGINX 404 Not Found error, everything is working fine. Nginx is up and running, but there are no Ingress objects, so no backend is found.
+Find the external IP of Nginx:
+```
+kubectl get services -n ingress-nginx
+```
+Navigate to the IP address using a new browser tab. If you get an NGINX 404 Not Found error, everything is working fine. Nginx is up and running, but there are no Ingress objects, so no backend is found.
 
 
 ### Install the Nginx Ingress Controller
 
 From the Cloud Shell, using kubectl, install the NGINX Ingress Controller components by using the public provider manifest:
-    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.1/deploy/static/provider/cloud/deploy.yaml
-
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.1/deploy/static/provider/cloud/deploy.yaml
+```
 Confirm the controller is installed and running by viewing its deployment:
-    kubectl get deployments -n ingress-nginx
-
+```
+kubectl get deployments -n ingress-nginx
+```
 Find the external IP of Nginx:
+```
     kubectl get services -n ingress-nginx
-
+```
 Navigate to the IP address using a new browser tab. If you get an NGINX 404 Not Found error, everything is working fine. Nginx is up and running, but there are no Ingress objects, so no backend is found.
 
 Deploy the First Application and Ingress
 
 Create the hello-app deployment:
-    kubectl create deployment hello-app --image=gcr.io/google-samples/hello-app:1.0
-
+```
+kubectl create deployment hello-app --image=gcr.io/google-samples/hello-app:1.0
+```
 Expose the deployment:
-    kubectl expose deployment hello-app --port=8080 --target-port=8080
-
+```
+kubectl expose deployment hello-app --port=8080 --target-port=8080
+```
 Click Open Editor.
 
-    When prompted, open the Editor in a new window.
+When prompted, open the Editor in a new window.
 
 
 When prompted, open the Editor in a new window.
@@ -116,8 +121,9 @@ Using the File menu, click Save.
 Return to the Cloud Shell terminal tab and click Open Terminal.
 
 Apply the manifest to the cluster to create the Ingress:
-    kubectl apply -f hello-ingress.yaml
-
+```
+kubectl apply -f hello-ingress.yaml
+```
 Return to the browser tab where you pasted the external IP and reload the Nginx IP address but append the url with "/hello". You should now be able to see the hello-app service.
 
 ### Deploy the Second Application and Ingress
@@ -125,11 +131,13 @@ Return to the browser tab where you pasted the external IP and reload the Nginx 
 
 
 Create the whereami deployment:
-    kubectl create deployment whereami-app --image=gcr.io/google-samples/whereami:v1.1.1
-
+```
+kubectl create deployment whereami-app --image=gcr.io/google-samples/whereami:v1.1.1
+```
 Expose the deployment:
-    kubectl expose deployment whereami-app --port=8080 --target-port=8080
-
+```
+kubectl expose deployment whereami-app --port=8080 --target-port=8080
+```
 Return to the Cloud Editor tab.
 
 Using the File menu, click New File.
@@ -160,6 +168,7 @@ spec:
 
 
 Apply the manifest to the cluster:
-    kubectl apply -f whereami-ingress.yaml
-
+```
+kubectl apply -f whereami-ingress.yaml
+```
 Return to the browser tab where you pasted the external IP and reload the Nginx IP address but add "/whereami" to the URL. You should now be able to see the whereami app.
