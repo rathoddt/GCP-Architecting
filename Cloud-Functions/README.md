@@ -58,7 +58,8 @@ gcloud functions deploy FUNCTION_NAME \
 
 
 ## Applying 1st Gen Triggers
-HTTP Triggers  
+
+#### HTTP Triggers  
 
 Pass GET, POST, PUT, DELETE, or OPTIONS argument and values via query parameters to the Cloud Function-generated URL
 
@@ -105,16 +106,16 @@ Wildcards are supported:
 	- users/{username}/addresses/{phone}
 
 #### Working with Firebase Triggers
-Google Analytics
+Google Analytics  
 	- Triggers on Apple or Android conversion events, such as inapp purchase
 
-Realtime Database
+Realtime Database  
 	- Similar to Firestore with event types, data received, and path wildcards
 
-Authentication
+Authentication  
 	- Triggers on user creation/first-time sign-in or deletion events
 
-Remote Config
+Remote Config  
 	- Triggers when Remote Config service updates for UI and app changes 
 
 
