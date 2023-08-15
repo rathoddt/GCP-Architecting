@@ -118,6 +118,8 @@ Authentication
 Remote Config  
 	- Triggers when Remote Config service updates for UI and app changes 
 
-
+```
+print(f"Temporary hold status: {file['temporaryHold']}.") 
+```
 ### Resources 
 git clone https://github.com/pluralsight-cloud/content-hands-on-with-google-cloud-functions
