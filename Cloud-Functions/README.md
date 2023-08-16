@@ -123,3 +123,6 @@ print(f"Temporary hold status: {file['temporaryHold']}.") 
 ```
 ### Resources 
 git clone https://github.com/pluralsight-cloud/content-hands-on-with-google-cloud-functions
+
+
+https://codelabs.developers.google.com/codelabs/connecting-to-cloud-sql-with-cloud-functions#2
