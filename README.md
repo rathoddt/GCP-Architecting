@@ -25,3 +25,11 @@ git clone https://github.com/ACloudGuru-Resources/content-gcpro-operations.git
 
 <b> Cloud Run </b>  
 Cloudrun - Google cloud's serverless container-based compute engine
+
+### Important gcloud commands
+```
+#### Create shell variables for Project ID and Project Number
+export PROJECT_ID=$(gcloud config list --format 'value(core.project)')
+
+export PROJECT_NUMBER=$(gcloud projects list --filter="$PROJECT_ID" --format="value(PROJECT_NUMBER)")
+```
