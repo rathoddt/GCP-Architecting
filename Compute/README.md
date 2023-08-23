@@ -15,20 +15,32 @@ echo "Hello world from $(hostname) $(hostname -i)" > /var/www/html/index.html
 sudo service apache2 start
 ```
 
-Startup Script
+### Startup Script
 ```
 #!/bin/bash
 apt update 
 apt -y install apache2
 echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
+
+systemctl start apache2
+systemctl enable apache2
 ```
 
 ```
 #!/bin/bash
 echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
 service apache2 start
+```
+### Managed & Unmanaged Instance group
+
+`Scale-in` : reduce no of VMs in response to decreasing load  
+`Scale-out` : increase no of VMs in response to increase in load
 
 
+
+
+
+```
 gcloud config list project
 gcloud config configurations list
 gcloud compute instances list

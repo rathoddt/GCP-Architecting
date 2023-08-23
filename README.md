@@ -1,5 +1,18 @@
 # GCP-Architecting
 
+
+### Gcloud basic commands
+```
+gcloud compute instances list
+gcloud compute zones list
+gcloud compute regions list
+gcloud compute machine-types list
+gcloud compute machine-types list --filter="zone:us-central1-b"
+gcloud compute machine-types list --filter="zone:( us-central1-b europe-west1-d )"
+```
+
+
+
 Setting GCP project to work with
 ```
 gcloud config set project VALUE
@@ -9,6 +22,9 @@ gcloud services enable run.googleapis.com  cloudbuild.googleapis.com secretmanag
 # Cloning sample repo
 git clone https://github.com/ACloudGuru-Resources/content-google-cloud-run-deep-dive/
 ```
+
+
+
 
 ## Creating GKE cluster
 ```
