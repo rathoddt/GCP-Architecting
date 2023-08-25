@@ -1,5 +1,7 @@
 # GCP-Architecting
 
+SLAs for different service
+https://cloud.google.com/terms/sla
 
 ### Gcloud basic commands
 ```
