@@ -1,5 +1,21 @@
 # GCP-Architecting
 
+### GCP Global Infrastructure
+38
+REGIONS
+
+115
+ZONES
+
+187
+NETWORK EDGE LOCATIONS
+AVAILABLE IN
+
+200+
+COUNTRIES AND TERRITORIES
+
+
+
 SLAs for different service
 https://cloud.google.com/terms/sla
 
