@@ -1,6 +1,9 @@
 # VPC
 VPC in GCP provides global network connectivity (inclusing regions). <i>Firewalls </i> on the other hand provides security to this network (VPC) and managed by network admin role
 
+
+VPC can be share across projects
+
 ## Firewalls
 
 ```
