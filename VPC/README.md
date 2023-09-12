@@ -66,3 +66,11 @@ https://cloud.google.com/vpc/docs/provisioning-shared-vpc
 Cloud NAT uses Cloud NAT gateway to manage those connections. Cloud NAT gateway is region and VPC network specific.
 
 
+### VPC Service Controls
+VPC Service Controls is security perimeter around Google cloud Services
+
+
+
+https://github.com/leg100/gcp-hardening-guide
+
+

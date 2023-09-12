@@ -7,6 +7,8 @@ Google four Golden signal
  - traffic
  - saturation
 
+https://cloud.google.com/monitoring/monitor-compute-engine-virtual-machine
+
 
 ```
 curl -sSO https://dl.google.com/cloudagents/add-google-cloud-ops-agent-repo.sh
