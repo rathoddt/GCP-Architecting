@@ -1,5 +1,15 @@
 # Google Compute Engine
 
+<b> Shielded VM</b>
+Shielded VMs are virtual machines (VMs) on Google Cloud hardened by a set of security controls that help defend against rootkits and bootkits. Using Shielded VMs helps protect enterprise workloads from threats like remote attacks, privilege escalation, and malicious insiders. Shielded VMs leverage advanced platform security capabilities such as secure and measured boot, a virtual trusted platform module (vTPM), UEFI firmware, and integrity monitoring.
+
+Shielded VM instances run firmware which is signed and verified using Google's Certificate Authority, ensuring that the instance's firmware is unmodified and establishing the root of trust for Secure Boot
+
+
+#### NAT vs Bastion
+ NAT instances allows outbound traffic from instances in VPC where as Bastion instance allows inbound SSH to the instances in VPC.
+
+
 ```
 sudo su
 apt update 

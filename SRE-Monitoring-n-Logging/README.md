@@ -10,6 +10,9 @@ Google four Golden signal
 https://cloud.google.com/monitoring/monitor-compute-engine-virtual-machine
 
 
+Cloud Logging-agent is based on `fluentd`
+Cloud monitoring-agent is based on `collectd`
+
 ```
 curl -sSO https://dl.google.com/cloudagents/add-google-cloud-ops-agent-repo.sh
 
