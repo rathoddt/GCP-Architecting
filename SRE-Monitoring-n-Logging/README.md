@@ -94,6 +94,30 @@ Public uptime checks can determine the availability of the following monitored r
 https://cloud.google.com/monitoring/uptime-checks
 
 
+
+# Cloud logging
+Set up repos
+
+curl -sSO https://dl.google.com/cloudagents/add-logging-agent-repo.sh
+sudo bash add-logging-agent-repo.sh
+sudo apt update
+
+Install latest version
+```
+sudo apt-get install google-fluentd
+```
+Install configuration files
+```
+sudo apt install -y google-fluentd-catch-all-config
+```
+Restart agent
+```
+sudo service google-fluentd start
+```
+Check status
+```
+sudo service google-fluentd status
+```
 ### Resources 
 https://acloudguru-content-attachment-production.s3-accelerate.amazonaws.com/1600872385381-website-instance-create-with-agent.txt
 
