@@ -8,7 +8,8 @@ Google four Golden signal
  - saturation
 
 https://cloud.google.com/monitoring/monitor-compute-engine-virtual-machine
-
+https://cloud.google.com/monitoring/docs
+https://cloud.google.com/monitoring/docs/monitoring-overview
 
 Cloud Logging-agent is based on `fluentd`
 Cloud monitoring-agent is based on `collectd`
