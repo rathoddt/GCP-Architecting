@@ -8,6 +8,9 @@ Google four Golden signal
  - saturation
 
 
+Cloud Logging-agent is based on `fluentd`
+Cloud monitoring-agent is based on `collectd`
+
 ```
 curl -sSO https://dl.google.com/cloudagents/add-google-cloud-ops-agent-repo.sh
 
