@@ -1,5 +1,10 @@
 # GCP-Architecting
 
+Cloud Architect Role:  
+- translating the business and technical requirements into a real-world implementation, often based on an existing environment.
+- The architect creates the blueprint that allows an organization to leverage the power of Google Cloud.
+
+
 ### GCP Global Infrastructure
 38
 REGIONS
