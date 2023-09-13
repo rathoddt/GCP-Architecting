@@ -2,7 +2,7 @@
 
 ## 1. Set up a hybrid architecture on Google Cloud and on-premises
 
-![alt text](http://url/to/img.png)
+// ![alt text](http://url/to/img.png)
 
 ![Hybrid Architecture](01-hybrid-env.jpg) 
 
