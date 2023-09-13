@@ -19,6 +19,21 @@ COUNTRIES AND TERRITORIES
 SLAs for different service
 https://cloud.google.com/terms/sla
 
+https://github.com/GoogleCloudPlatform/professional-services.git
+https://github.com/GoogleCloudPlatform/professional-services
+
+
+`Role` is what can I do
+## Best Practices
+Commonly adopted categories of tags/labels include 
+	- technical tags (e.g., Environment, Workload, InstanceRole, and Name),
+	- tags for automation (e.g., Patch Group, and SSMManaged), 
+	- business tags (e.g., Owner), and 
+	- Security tags (e.g., Confidentiality).
+
+
+
+
 ### Gcloud basic commands
 ```
 gcloud compute instances list
