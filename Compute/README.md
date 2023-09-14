@@ -10,6 +10,11 @@ Shielded VM instances run firmware which is signed and verified using Google's C
  NAT instances allows outbound traffic from instances in VPC where as Bastion instance allows inbound SSH to the instances in VPC.
 
 
+Bastion hosts provide an external facing point of entry into a network containing private network instances. This host can provide a single point of fortification or audit and can be started and stopped to enable or disable inbound SSH. By using a bastion host, you can connect to an VM that does not have an external IP address. This approach allows you to connect to a development environment or manage the database instance for your external application without configuring additional firewall rules.
+
+![bastion host](bastion.png)
+
+https://cloud.google.com/solutions/connecting-securely
 ```
 sudo su
 apt update 
