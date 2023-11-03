@@ -30,7 +30,7 @@ echo "Hello world from $(hostname) $(hostname -i)" > /var/www/html/index.html
 sudo service apache2 start
 ```
 
-### Startup Script
+### Startup Script - Linux
 ```
 #!/bin/bash
 apt update 
@@ -45,6 +45,25 @@ systemctl enable apache2
 #!/bin/bash
 echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
 service apache2 start
+```
+
+### Startup Script - Windows
+```
+gcloud compute instances create VM_NAME `
+  --image-project=windows-cloud `
+  --image-family=windows-2019-core `
+  --metadata=windows-startup-script-ps1='Import-Module servermanager
+  Install-WindowsFeature Web-Server -IncludeAllSubFeature
+  "<html><body><p>Windows startup script added directly.</p></body></html>" > C:\inetpub\wwwroot\index.html'
+```
+
+```
+gcloud compute instances create VM_NAME `
+  --image-project=windows-cloud `
+  --image-family=windows-2019-core `
+  --metadata=windows-startup-script-ps1='Import-Module servermanager
+  Install-WindowsFeature Web-Server -IncludeAllSubFeature
+  "<html><body><p>Windows startup script added directly.</p></body></html>" > C:\inetpub\wwwroot\index.html'
 ```
 ### Managed & Unmanaged Instance group
 

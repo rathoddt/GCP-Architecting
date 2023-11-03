@@ -87,3 +87,11 @@ export PROJECT_ID=$(gcloud config list --format 'value(core.project)')
 
 export PROJECT_NUMBER=$(gcloud projects list --filter="$PROJECT_ID" --format="value(PROJECT_NUMBER)")
 ```
+
+```
+ssh diliprathod_fullstack_developer@34.125.114.227
+```
+
+```
+ gcloud auth activate-service-account generic-sa@my-poc-dilip.iam.gserviceaccount.com --key-file=c:\creds\key.json --project=my-poc-dilip
+```
