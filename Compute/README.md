@@ -58,12 +58,14 @@ gcloud compute instances create VM_NAME `
 ```
 
 ```
-gcloud compute instances create VM_NAME `
+gcloud compute instances create vm-05-startuScript-chrome-jenkins `
   --image-project=windows-cloud `
   --image-family=windows-2019-core `
-  --metadata=windows-startup-script-ps1='Import-Module servermanager
-  Install-WindowsFeature Web-Server -IncludeAllSubFeature
-  "<html><body><p>Windows startup script added directly.</p></body></html>" > C:\inetpub\wwwroot\index.html'
+  --metadata=windows-startup-script-ps1='$Path = $env:TEMP; $Installer = "chrome_installer.exe"; Invoke-WebRequest "https://dl.google.com/chrome/install/latest/chrome_installer.exe" -OutFile $Path$Installer; Start-Process -FilePath $Path$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path$Installer'
+```
+
+```
+$Path = $env:TEMP; $Installer = "chrome_installer.exe"; Invoke-WebRequest "https://dl.google.com/chrome/install/latest/chrome_installer.exe" -OutFile $Path$Installer; Start-Process -FilePath $Path$Installer -Args "/silent /install" -Verb RunAs -Wait; Remove-Item $Path$Installer
 ```
 ### Managed & Unmanaged Instance group
 
