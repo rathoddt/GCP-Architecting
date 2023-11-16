@@ -29,6 +29,14 @@ https://github.com/GoogleCloudPlatform/professional-services
 
 
 `Role` is what can I do
+
+## Setting project
+```
+export PROJECT_ID=`gcloud config get-value core/project`
+echo $PROJECT_ID
+export PROJECT_NUMBER=`gcloud projects describe $PROJECT_ID --format='value(projectNumber)'`
+echo $PROJECT_NUMBER
+```
 ## Best Practices
 Commonly adopted categories of tags/labels include 
 	- technical tags (e.g., Environment, Workload, InstanceRole, and Name),
