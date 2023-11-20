@@ -13,6 +13,7 @@ gcloud iam service-accounts list
 gsutil mb gs://$PROJECT_ID-mybucket
 echo fooooo > foo.txt
 gsutil cp foo.txt gs://$PROJECT_ID-mybucket
+
 gsutil iam ch serviceAccount:aws-federated@$PROJECT_ID.iam.gserviceaccount.com:objectViewer gs://$PROJECT_ID-mybucket
 gcloud config set project my-poc-dilip
 

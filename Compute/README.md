@@ -48,6 +48,11 @@ service apache2 start
 ```
 
 ### Startup Script - Windows
+https://cloud.google.com/compute/docs/instances/startup-scripts#providing_startup_script_contents_directly
+
+https://cloud.google.com/compute/docs/instances/startup-scripts/windows#passing-storage
+
+https://cloud.google.com/compute/docs/instances/startup-scripts/windows#accessing-metadata
 ```
 gcloud compute instances create VM_NAME `
   --image-project=windows-cloud `
