@@ -36,10 +36,28 @@ https://cloud.google.com/sql/docs/postgres/connect-instance-compute-engine#pytho
 gcloud sql databases create quickstart_db --instance=mnqs
 gcloud sql connect mnqs --user=postgres --quiet
 gcloud sql users create quickstart-user --instance=mnqs --password=test
+
 gcloud iam service-accounts create quickstart-service-account --description="SA" --display-name="quickstart-service-account"
 gcloud projects add-iam-policy-binding my-poc-dilip --member="serviceAccount:quickstart-service-account@my-poc-dilip.iam.gserviceaccount.com" --role="roles/cloudsql.client" --role="roles/storage.objectViewer"
-gcloud compute instances create quickstart-vm-instance --image-family=debian-10 --image-project=debian-cloud  --machine-type=e2-medium --service-account=quickstart-service-account@my-poc-dilip.iam.gserviceaccount.com --scopes=https://www.googleapis.com/auth/cloud-platform --tags=http-server --zone=us-central1-a
-history -w /dev/stdout
+
+gcloud compute instances create quickstart-vm-instance1 --provisioning-model=SPOT --instance-termination-action=STOP --create-disk=auto-delete=yes,boot=yes,device-name=instance-1,image=projects/centos-cloud/global/images/centos-7-v20231115,mode=rw,size=20,type=projects/my-poc-dilip/zones/us-central1-a/diskTypes/pd-balanced  --machine-type=e2-medium --service-account=quickstart-service-account@my-poc-dilip.iam.gserviceaccount.com --scopes=https://www.googleapis.com/auth/cloud-platform --tags=http-server --zone=us-central1-a
+
+ 
+
+
+gcloud compute instances create instance-1 --project=my-poc-dilip \
+--zone=us-central1-a \
+--machine-type=e2-medium \
+--network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=default \
+--no-restart-on-failure \
+--maintenance-policy=TERMINATE \
+--provisioning-model=SPOT \
+--instance-termination-action=STOP \
+--service-account=490239511999-compute@developer.gserviceaccount.com \
+--scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append \
+--create-disk=auto-delete=yes,boot=yes,device-name=instance-1,image=projects/centos-cloud/global/images/centos-7-v20231115,mode=rw,size=20,type=projects/my-poc-dilip/zones/us-central1-a/diskTypes/pd-balanced \
+--no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --labels=goog-ec-src=vm_add-gcloud --reservation-affinity=any
+
 ```
 
 ```

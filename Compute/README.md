@@ -111,3 +111,13 @@ gcloud compute instances create instance-1 \
   --maintenance-policy=MIGRATE \
   --provisioning-model=STANDARD \ --service-account=232560180807-compute@developer.gserviceaccount.com  \ --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append \ --create-disk=auto-delete=yes,boot=yes,device-name=instance-1,image=projects/debian-cloud/global/images/debian-11-bullseye-v20230809,mode=rw,size=10,type=projects/serverless-gcp-391314/zones/us-west4-b/diskTypes/pd-balanced  \ --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring  \ --labels=goog-ec-src=vm_add-gcloud --reservation-affinity=any
 ```
+
+
+## Metadata
+```
+curl "http://metadata.google.internal/computeMetadata/v1/instance/" -H "Metadata-Flavor: Google"
+curl "http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/" -H "Metadata-Flavor: Google"
+curl "http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/" -H "Metadata-Flavor: Google"
+curl "http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/gateway" -H "Metadata-Flavor: Google"
+curl -s -H "Metadata-Flavor: Google" "http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/gateway" 
+```
