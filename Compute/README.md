@@ -110,6 +110,9 @@ gcloud compute instances create instance-1 \
   --network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=default \
   --maintenance-policy=MIGRATE \
   --provisioning-model=STANDARD \ --service-account=232560180807-compute@developer.gserviceaccount.com  \ --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append \ --create-disk=auto-delete=yes,boot=yes,device-name=instance-1,image=projects/debian-cloud/global/images/debian-11-bullseye-v20230809,mode=rw,size=10,type=projects/serverless-gcp-391314/zones/us-west4-b/diskTypes/pd-balanced  \ --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring  \ --labels=goog-ec-src=vm_add-gcloud --reservation-affinity=any
+
+
+  gcloud compute instances create quickstart-vm-instance1 --provisioning-model=SPOT --instance-termination-action=STOP --create-disk=auto-delete=yes,boot=yes,device-name=instance-1,image=projects/centos-cloud/global/images/centos-7-v20231115,mode=rw,size=20,type=projects/my-poc-dilip/zones/us-central1-a/diskTypes/pd-balanced  --machine-type=e2-medium --service-account=quickstart-service-account@my-poc-dilip.iam.gserviceaccount.com --scopes=https://www.googleapis.com/auth/cloud-platform --tags=http-server --zone=us-central1-a
 ```
 
 

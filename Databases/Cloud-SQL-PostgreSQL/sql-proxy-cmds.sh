@@ -44,3 +44,7 @@ sudo systemctl status cloudsql_auth_proxy_automatic.service
 ls
 sudo systemctl status cloudsql_auth_proxy_automatic.service
 psql "host=127.0.0.1 sslmode=disable dbname=mnqs user=postgres"
+
+gcloud sql connect mnqs --user=postgres --quiet
+
+domain googleapis.com metadata method google.cloud.sql.v1beta4.SqlConnectService.GetConnectSettings service sqladmin.googleapis.com reason ACCESS_TOKEN_SCOPE_INSUFFICIENT More details  Reason: insufficientPermissions, Message: Insufficient Permission

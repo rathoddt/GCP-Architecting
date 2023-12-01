@@ -45,6 +45,7 @@ Type=Simple
 User=root
 Group=root
 ExecStart=/opt/cloud-sql-proxy -instance=my-poc-dilip:us-central1:quickstart-vm-instance1=tcp:0.0.0.0:3307 -ip_address_types=PRIVATE
+ExecStart=/opt/cloud-sql-proxy --auto-iam-authn --address 0.0.0.0 --port 3307 --private-ip  my-poc-dilip:us-central1:mnqs
 StandardOutput=syslog
 StandardError=syslog
 Restart=always
@@ -59,5 +60,5 @@ sudo systemctl daemon-reload
 sudo systemctl start routing.service
 sudo systemctl start cloudsql_auth_proxy_automatic.service
 
-
+sudo systemctl status routing.service
 sudo systemctl status cloudsql_auth_proxy_automatic.service
