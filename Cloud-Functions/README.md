@@ -126,3 +126,14 @@ git clone https://github.com/pluralsight-cloud/content-hands-on-with-google-clou
 
 
 https://codelabs.developers.google.com/codelabs/connecting-to-cloud-sql-with-cloud-functions#2
+
+### Base64 Encoding for cloud function to start/stop VM
+https://cloud.google.com/scheduler/docs/start-and-stop-compute-engine-instances-on-a-schedule
+
+```
+us-central1-a	
+eyJ6b25lIjoidXMtY2VudHJhbDEtYSIsICJsYWJlbCI6ImVudj1kZXYifQ==
+
+asia-south1-c	
+eyJ6b25lIjoiYXNpYS1zb3V0aDEtYyIsICJsYWJlbCI6ImVudj1kZXYifQ==
+```
