@@ -1,22 +1,19 @@
 # GCP Networking
 
-### Creating auto mode VPC using gcloud
-```
-gcloud compute networks create my-auto-network --project=my-poc-dilip --subnet-mode=auto --mtu=1460 --bgp-routing-mode=regional 
+GCP network is global in scope, and the default mode of operations.
+- All traffic between regions (and within POP network) is on Google?s private network
+- i.e., a global privat e net work (never touches the public Internet).
+- Result: better security, routing, and performance.
+- GCP networking resources privately communicate all over the world by default.
 
-gcloud compute firewall-rules create my-auto-network-allow-custom --project=my-poc-dilip --network=projects/my-poc-dilip/global/networks/my-auto-network --description=Allows\ connection\ from\ any\ source\ to\ any\ instance\ on\ the\ network\ using\ custom\ protocols. --direction=INGRESS --priority=65534 --source-ranges=10.128.0.0/9 --action=ALLOW --rules=all && 
+### Regions
+- Independent geographic areas that host GCP data centers.
+- At the moment, 20 regions are available worldwide, and growing.
+- Typically consists of 3 or m ore zones.
+- Examples: us-central1, europe-west4, asia-east2
 
-gcloud compute firewall-rules create my-auto-network-allow-icmp --project=my-poc-dilip --network=projects/my-poc-dilip/global/networks/my-auto-network --description=Allows\ ICMP\ connections\ from\ any\ source\ to\ any\ instance\ on\ the\ network. --direction=INGRESS --priority=65534 --source-ranges=0.0.0.0/0 --action=ALLOW --rules=icmp 
 
-gcloud compute firewall-rules create my-auto-network-allow-rdp --project=my-poc-dilip --network=projects/my-poc-dilip/global/networks/my-auto-network --description=Allows\ RDP\ connections\ from\ any\ source\ to\ any\ instance\ on\ the\ network\ using\ port\ 3389. --direction=INGRESS --priority=65534 --source-ranges=0.0.0.0/0 --action=ALLOW --rules=tcp:3389 
+Projects separate users, whereas VPCs separate systems
 
-gcloud compute firewall-rules create my-auto-network-allow-ssh --project=my-poc-dilip --network=projects/my-poc-dilip/global/networks/my-auto-network --description=Allows\ TCP\ connections\ from\ any\ source\ to\ any\ instance\ on\ the\ network\ using\ port\ 22. --direction=INGRESS --priority=65534 --source-ranges=0.0.0.0/0 --action=ALLOW --rules=tcp:22
-```
-
-### Creating custom VPC using gcloud
-
-```
-gcloud compute networks create my-custom-vpc --project=my-poc-dilip --subnet-mode=custom --mtu=1460 --bgp-routing-mode=regional
-
-gcloud compute networks subnets create subnet-a --project=my-poc-dilip --range=10.0.0.0/16 --stack-type=IPV4_ONLY --network=my-custom-vpc --region=asia-south1
-```
+### IP Addrersses
+Static reserved IP addressess are not charged they are attached to VM
