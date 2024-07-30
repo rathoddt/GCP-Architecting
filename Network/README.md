@@ -17,3 +17,16 @@ Projects separate users, whereas VPCs separate systems
 
 ### IP Addrersses
 Static reserved IP addressess are not charged they are attached to VM
+
+gcloud command for reserving IP address
+```
+gcloud compute addresses create res-ip-01 --region=us-east1
+```
+
+### Firewall
+Defined at VPC(network) level, but enforced for each instance
+
+- Network Tags
+   -- Instance-level, granular enforcement
+   -- Apply tag to instance 
+   -- Rule is enforced on only tagged instances and not entire network
