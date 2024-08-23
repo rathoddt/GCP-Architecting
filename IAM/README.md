@@ -26,3 +26,10 @@ Adding/setting roles via policy documet
 ```
 gcloud projects set-iam-policy terraform-poc-01 policy.json
 ```
+
+### ssh into Linux VMs
+per instance; inside metadat add  
+```
+enable-oslogin: true
+```
+
