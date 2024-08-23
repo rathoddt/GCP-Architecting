@@ -33,3 +33,13 @@ per instance; inside metadat add
 enable-oslogin: true
 ```
 
+Project wide ssh via metadata  
+Compute Engine --> Metadata
+and add
+```
+enable-oslogin: true
+```
+
+Required IAM roles to connect - OSLogin and Service Account User
+
+
