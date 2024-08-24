@@ -30,3 +30,15 @@ Defined at VPC(network) level, but enforced for each instance
    -- Instance-level, granular enforcement
    -- Apply tag to instance 
    -- Rule is enforced on only tagged instances and not entire network
+
+# Advanced Networking Topics
+1. Extending your network
+   - Shared VPC
+   - VPC Network Peering
+   - Private Service Connect
+2. Networking force multipliers
+   - Load balancers, Instance Groups and CDN
+3. Kubernetes Engine management
+   - Cluster growth, private clusters
+4. DNS management
+   - Cloud DNS
