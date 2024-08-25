@@ -103,3 +103,9 @@ ssh diliprathod_fullstack_developer@34.125.114.227
 ```
  gcloud auth activate-service-account generic-sa@my-poc-dilip.iam.gserviceaccount.com --key-file=c:\creds\key.json --project=my-poc-dilip
 ```
+
+# References and resources
+```
+https://github.com/ACloudGuru-Resources
+https://github.com/orgs/ACloudGuru-Resources/repositories
+```

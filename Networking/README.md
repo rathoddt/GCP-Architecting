@@ -42,3 +42,5 @@ Defined at VPC(network) level, but enforced for each instance
    - Cluster growth, private clusters
 4. DNS management
    - Cloud DNS
+
+gsutil cp gs://la-gcloud-course-resources/network-engineer/* .
