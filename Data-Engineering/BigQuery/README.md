@@ -17,6 +17,14 @@ bq mk \
 --schema ride_id:string,point_idx:integer,latitude:float,longitude:float,\
 timestamp:timestamp,meter_reading:float,meter_increment:float,ride_status:string,\
 passenger_count:integer -t taxirides.realtime
+<!-- This section creates the 'taxirides' dataset in BigQuery -->
+#Deploy the Dataflow Template:
+gcloud dataflow jobs run iotflow \
+    --gcs-location gs://dataflow-templates-us-east1/latest/PubSub_to_BigQuery \
+    --region us-east1 \
+    --worker-machine-type e2-medium \
+    --staging-location gs://qwiklabs-gcp-03-b44ec061b738/temp \
+    --parameters inputTopic=projects/pubsub-public-data/topics/taxirides-realtime,outputTableSpec=qwiklabs-gcp-03-b44ec061b738:taxirides.realtime
 ```
 
 
