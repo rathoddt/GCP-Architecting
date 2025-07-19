@@ -9,6 +9,14 @@ https://support.google.com/trends/answer/12764470?hl=en#:~:text=The%20BigQuery%2
 
 ```
 bq mk taxirides
+
+//This command creates a new table (taxirides.realtime) in BigQuery with the given schema and applies time-based partitioning on the timestamp field.
+
+bq mk \
+--time_partitioning_field timestamp \
+--schema ride_id:string,point_idx:integer,latitude:float,longitude:float,\
+timestamp:timestamp,meter_reading:float,meter_increment:float,ride_status:string,\
+passenger_count:integer -t taxirides.realtime
 ```
 
 
